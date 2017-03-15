@@ -18,10 +18,10 @@ class View(models.Model):
            <div class="oe_footer"></div>
        </xpath>''')
 
-        self._create_view('webclient_bootstrap_enterprise_title', 'web.webclient_bootstrap', '''
+        self._create_view('webclient_bootstrap_enterprise_title', 'web.layout', '''
        <xpath expr="//title" position="replace"></xpath>''')
 
-        self._create_view('webclient_bootstrap_enterprise_favicon', 'web.webclient_bootstrap', '''
+        self._create_view('webclient_bootstrap_enterprise_favicon', 'web.layout', '''
        <xpath expr="//link[@rel='shortcut icon']" position="replace">
            <t t-set="favicon" t-value="request and request.env['ir.config_parameter'].get_debranding_parameters().get('web_debranding.favicon_url', '')"/>
            <t t-if="favicon">
