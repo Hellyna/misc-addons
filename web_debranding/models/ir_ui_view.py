@@ -18,16 +18,16 @@ class View(models.Model):
            <div class="oe_footer"></div>
        </xpath>''')
 
-        self._create_view('webclient_bootstrap_enterprise_title', 'web.webclient_bootstrap', '''
-       <xpath expr="//title" position="replace"></xpath>''')
+#        self._create_view('webclient_bootstrap_enterprise_title', 'web.webclient_bootstrap', '''
+#       <xpath expr="//title" position="replace"></xpath>''')
 
-        self._create_view('webclient_bootstrap_enterprise_favicon', 'web.webclient_bootstrap', '''
-       <xpath expr="//link[@rel='shortcut icon']" position="replace">
-           <t t-set="favicon" t-value="request and request.env['ir.config_parameter'].get_debranding_parameters().get('web_debranding.favicon_url', '')"/>
-           <t t-if="favicon">
-               <link rel="shortcut icon" t-att-href="favicon" type="image/x-icon"/>
-           </t>
-       </xpath>''')
+#        self._create_view('webclient_bootstrap_enterprise_favicon', 'web.webclient_bootstrap', '''
+#       <xpath expr="//link[@rel='shortcut icon']" position="replace">
+#           <t t-set="favicon" t-value="request and request.env['ir.config_parameter'].get_debranding_parameters().get('web_debranding.favicon_url', '')"/>
+#           <t t-if="favicon">
+#               <link rel="shortcut icon" t-att-href="favicon" type="image/x-icon"/>
+#           </t>
+#       </xpath>''')
 
     @api.model
     def _create_view(self, name, inherit_id, arch, noupdate=False, type='qweb'):
